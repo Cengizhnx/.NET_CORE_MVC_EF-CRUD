@@ -1,0 +1,41 @@
+﻿@model WebApplication1.Models.Product
+@{
+}
+
+<h3>Edit Product</h3>
+<form method="post" action="View">
+    <div class="form-group my-3">
+        <label class="my-1" for="">Id</label>
+        <input type="number" class="form-control" asp-for="ProductId" readonly>
+    </div>
+    <div class="form-group my-3">
+        <label class="my-1" for="">Name</label>
+        <input type="text" class="form-control" asp-for="Name" placeholder="Enter Name">
+    </div>
+    <div class="form-group my-3">
+        <label class="my-1" for="">Product Number</label>
+        <input type="text" class="form-control" asp-for="ProductNumber" placeholder="Enter Product Number">
+    </div>
+    <div class="form-group my-3">
+        <label class="my-1" for="">Color</label>
+        <input type="text" class="form-control" asp-for="Color" placeholder="Enter Color">
+    </div>
+    <div class="form-group my-3">
+        <label class="my-1" for="">Standard Cost</label>
+        <input type="text" class="form-control" asp-for="StandardCost" placeholder="Enter Standard Cost">
+    </div>
+    <div class="form-group my-3">
+        <label class="my-1" for="">List Price</label>
+        <input type="text" class="form-control" asp-for="ListPrice" placeholder="Enter List Price">
+    </div>
+    <div class="form-group my-3">
+        <label class="my-1" for="">Sell Start Date</label>
+        <input type="date" class="form-control" asp-for="SellStartDate" placeholder="Enter SellStartDate">
+    </div>
+    <div class="form-group my-3">
+        <label class="my-1" for="">Modified Date</label>
+        <input type="date" class="form-control" asp-for="ModifiedDate" placeholder="Enter Modified Date">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" asp-action="Delete" asp-controller="Product" class="btn btn-danger">Delete</button>
+</form>
